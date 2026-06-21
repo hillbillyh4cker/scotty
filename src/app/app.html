@@ -1,0 +1,827 @@
+<!-- Top Glow Grid Background -->
+<div class="glow-bg"></div>
+
+<!-- Header Navigation -->
+<header class="header" [class.scrolled]="isScrolled">
+    <div class="nav-container">
+        <a href="#" class="logo">
+            <img src="assets/logo-icon.png" alt="Perpetual Electric Logo Icon" class="logo-icon-img" style="height: 36px; width: 36px; object-fit: contain;">
+            <span class="logo-text"><span class="logo-p">Perpetual</span><span class="logo-e">Electric</span></span>
+        </a>
+        
+        <nav class="nav-links">
+            <a href="#about" class="nav-link">About Us</a>
+            <a href="#contact" class="nav-link">Contact</a>
+        </nav>
+
+        <div class="nav-actions">
+            <a href="tel:18054166596" class="btn-phone">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                <span>(805) 416-6596</span>
+            </a>
+            <a href="#contact" class="btn btn-primary nav-cta">Get Free Estimate</a>
+            
+            <!-- Hamburger menu button -->
+            <button class="mobile-menu-btn" [class.active]="mobileMenuOpen" (click)="toggleMobileMenu()" aria-label="Toggle Menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </div>
+</header>
+
+<!-- Mobile Nav Overlay -->
+<div class="mobile-nav" [class.active]="mobileMenuOpen">
+    <a href="#services" (click)="closeMobileMenu()" class="mobile-nav-link">Services</a>
+    <a href="#calculator" (click)="closeMobileMenu()" class="mobile-nav-link">Savings Calculator</a>
+    <a href="#why-us" (click)="closeMobileMenu()" class="mobile-nav-link">Why Us</a>
+    <a href="#testimonials" (click)="closeMobileMenu()" class="mobile-nav-link">Reviews</a>
+    <a href="#about" (click)="closeMobileMenu()" class="mobile-nav-link">About Us</a>
+    <a href="#contact" (click)="closeMobileMenu()" class="mobile-nav-link">Contact</a>
+    <a href="tel:18054166596" class="mobile-nav-phone">(805) 416-6596</a>
+    <a href="#contact" (click)="closeMobileMenu()" class="btn btn-primary" style="margin-top: 1rem;">Get Free Estimate</a>
+</div>
+
+<!-- Main Content -->
+<main>
+    
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container hero-grid">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="badge-dot"></span>
+                    <span>Certified Electrical, Solar & Low-Voltage Integrators</span>
+                </div>
+                <h1>Smart Power. Clean Energy. <br><span class="text-gradient">Connected Living.</span></h1>
+                <p class="hero-lead">We integrate heavy residential electrical systems, high-efficiency solar arrays, and low-voltage smart cabling to construct the modern, self-sustaining home of your dreams.</p>
+                
+                <div class="hero-ctas">
+                    <a href="#contact" class="btn btn-primary">Schedule Consultation</a>
+                    <a href="#calculator" class="btn btn-outline">
+                        <span>Test Savings Calculator</span>
+                        <svg class="icon-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                    </a>
+                </div>
+
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-num">{{ animatedExperience }}</span><span class="stat-plus">+</span>
+                        <span class="stat-label">Years Experience</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-num">{{ animatedHomes }}</span><span class="stat-plus">+</span>
+                        <span class="stat-label">Homes Powered</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-num">{{ animatedRating.toFixed(1) }}</span><span class="stat-star">★</span>
+                        <span class="stat-label">Google Rating</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-visual">
+                <div class="visual-wrapper" style="display: flex; align-items: center; justify-content: center; min-height: 400px; padding: 2.5rem; background-color: #ffffff;">
+                    <div class="visual-glow-ring"></div>
+                    <img src="assets/logo.jpg" alt="Perpetual Electric Logo" style="width: 100%; max-width: 340px; height: auto; display: block; object-fit: contain; z-index: 2; transition: transform var(--transition-slow);">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Badges Bar -->
+    <section class="trust-bar">
+        <div class="container trust-container">
+            <div class="trust-item">
+                <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                <span>Licensed, Bonded & Fully Insured</span>
+            </div>
+            <div class="trust-divider"></div>
+            <div class="trust-item">
+                <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <span>CEC Certified Solar Installers</span>
+            </div>
+            <div class="trust-divider"></div>
+            <div class="trust-item">
+                <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2.18" ry="2.18"/><rect x="2" y="14" width="20" height="8" rx="2.18" ry="2.18"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
+                <span>CEDIA Low Voltage Integrators</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">What We Do</span>
+                <h2>Our Three Core Pillars</h2>
+                <p class="section-desc">From complex high-amperage electrical panels to solar savings and structured media networks, we build premium utility setups for modern residential spaces.</p>
+            </div>
+
+            <!-- Interactive Services Tabs -->
+            <div class="services-tabs-container">
+                <div class="services-tabs-nav">
+                    <button class="tab-btn" [class.active]="activeTab === 'residential'" (click)="setActiveTab('residential')">
+                        <div class="tab-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14H12L11 22L21 10H12L13 2Z"/></svg>
+                        </div>
+                        <div class="tab-title-text">
+                            <h3>Residential Electrical</h3>
+                            <span>High voltage, panels & power</span>
+                        </div>
+                    </button>
+
+                    <button class="tab-btn" [class.active]="activeTab === 'solar'" (click)="setActiveTab('solar')">
+                        <div class="tab-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+                        </div>
+                        <div class="tab-title-text">
+                            <h3>Solar Solutions</h3>
+                            <span>Clean energy & batteries</span>
+                        </div>
+                    </button>
+
+                    <button class="tab-btn" [class.active]="activeTab === 'lowvoltage'" (click)="setActiveTab('lowvoltage')">
+                        <div class="tab-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"/><rect x="2" y="14" width="20" height="8" rx="2" ry="2"/><line x1="6" y1="6" x2="6" y2="6"/><line x1="6" y1="18" x2="6" y2="18"/><path d="M20 18h2a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-2"/></svg>
+                        </div>
+                        <div class="tab-title-text">
+                            <h3>Low Voltage & Smart</h3>
+                            <span>Data, security & sound</span>
+                        </div>
+                    </button>
+                </div>
+
+                <!-- Services Tab Content -->
+                <div class="services-tab-content">
+                    <!-- Residential Electrical Panel -->
+                    <div class="tab-panel" [class.active]="activeTab === 'residential'">
+                        <div class="panel-grid">
+                            <div class="panel-info">
+                                <span class="panel-tag">Residential Power Experts</span>
+                                <h3>Safe, Reliable, and High-Performance Electrical Wiring</h3>
+                                <p>Your home's electrical panel and infrastructure are the foundation of all your electronics, appliances, and smart tech. We execute clean, master-certified residential electrical services with uncompromising quality.</p>
+                                
+                                <ul class="service-list">
+                                    <li>
+                                        <span class="list-bullet"></span>
+                                        <div>
+                                            <strong>Panel Upgrades & Replacements:</strong> Transition your outdated 100A panel to a clean, smart-enabled 200A or 400A service.
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span class="list-bullet"></span>
+                                        <div>
+                                            <strong>EV Charger Installations:</strong> Dedicated 240V lines and smart chargers for Tesla, Rivian, and all major EV brands.
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span class="list-bullet"></span>
+                                        <div>
+                                            <strong>Lighting Design & Power Layouts:</strong> Recessed LED retrofitting, dimmers, automated controls, and accent systems.
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span class="list-bullet"></span>
+                                        <div>
+                                            <strong>Safety Audits & Code Correction:</strong> Troubleshooting electrical faults, grounding issues, and modernizing compliance.
+                                        </div>
+                                    </li>
+                                </ul>
+                                <a href="#contact" (click)="selectService('Residential Electrical')" class="btn btn-primary select-service-btn">Request Electrical Quote</a>
+                            </div>
+                            <div class="panel-graphic">
+                                <div class="grid-layout-graphic">
+                                    <div class="graphic-card">
+                                        <div class="card-icon blue-glow">
+                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18.36 6.64a9 9 0 1 1-12.73 0"/><line x1="12" y1="2" x2="12" y2="12"/></svg>
+                                        </div>
+                                        <h4>Panel Upgrades</h4>
+                                        <p>200A Smart panels with power analytics integration.</p>
+                                    </div>
+                                    <div class="graphic-card">
+                                        <div class="card-icon green-glow">
+                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18.5 2.5a2.5 2.5 0 0 1 2.5 2.5v12a2.5 2.5 0 0 1-2.5 2.5H16l-3.5 3.5V20H5.5A2.5 2.5 0 0 1 3 17.5V5A2.5 2.5 0 0 1 5.5 2.5H16z"/><line x1="9" y1="8" x2="15" y2="8"/><line x1="9" y1="12" x2="15" y2="12"/></svg>
+                                        </div>
+                                        <h4>EV Charging</h4>
+                                        <p>Level 2 Fast charging installations at home.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Solar Panel -->
+                    <div class="tab-panel" [class.active]="activeTab === 'solar'">
+                        <div class="panel-grid">
+                            <div class="panel-info">
+                                <span class="panel-tag">Sustainable Clean Energy</span>
+                                <h3>Custom Engineered Solar & Battery Backups</h3>
+                                <p>Take absolute control of your utility costs and protect your household against blackouts with a custom designed photovoltaic grid-tied or off-grid solar infrastructure.</p>
+                                
+                                <ul class="service-list">
+                                    <li>
+                                        <span class="list-bullet"></span>
+                                        <div>
+                                            <strong>Tier 1 Solar Modules:</strong> High-efficiency micro-inverter arrays that perform in all weather conditions.
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span class="list-bullet"></span>
+                                        <div>
+                                            <strong>Home Battery Backups:</strong> Integration with Tesla Powerwall, Enphase 5P, and smart transfer switches for seamless off-grid capability.
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span class="list-bullet"></span>
+                                        <div>
+                                            <strong>Generator Backup Systems:</strong> Standby generator integration with smart automatic transfer switches (ATS) for layered power redundancy.
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span class="list-bullet"></span>
+                                        <div>
+                                            <strong>Net Metering Setup:</strong> Complete coordination with municipal power grids to sell excess energy back.
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span class="list-bullet"></span>
+                                        <div>
+                                            <strong>System Monitoring Apps:</strong> Mobile dashboards to watch real-time energy production and home battery storage stats.
+                                        </div>
+                                    </li>
+                                </ul>
+                                <a href="#contact" (click)="selectService('Solar Energy')" class="btn btn-primary select-service-btn">Request Solar Quote</a>
+                            </div>
+                            <div class="panel-graphic">
+                                <div class="grid-layout-graphic">
+                                    <div class="graphic-card">
+                                        <div class="card-icon green-glow">
+                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/><circle cx="12" cy="12" r="4"/></svg>
+                                        </div>
+                                        <h4>Solar Roof Systems</h4>
+                                        <p>Aesthetic black-on-black panels with modular roof attachments.</p>
+                                    </div>
+                                    <div class="graphic-card">
+                                        <div class="card-icon blue-glow">
+                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="9" y1="3" x2="9" y2="21"/><line x1="15" y1="3" x2="15" y2="21"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="3" y1="15" x2="21" y2="15"/></svg>
+                                        </div>
+                                        <h4>Battery Backups</h4>
+                                        <p>Whole-home backup batteries for multi-day grid failures.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Low Voltage Panel -->
+                    <div class="tab-panel" [class.active]="activeTab === 'lowvoltage'">
+                        <div class="panel-grid">
+                            <div class="panel-info">
+                                <span class="panel-tag">Smart Home Architecture</span>
+                                <h3>Structured Cabling, High-Speed Data, and Security Networks</h3>
+                                <p>A reliable home is built on structured cabling. We install clean, high-bandwidth ethernet, optical fiber, security networks, and audio/video links that bypass congested Wi-Fi airways.</p>
+                                
+                                <ul class="service-list">
+                                    <li>
+                                        <span class="list-bullet"></span>
+                                        <div>
+                                            <strong>Cat6A & Fiber Network Wiring:</strong> Fast structured cabling backbones connecting wall outlets, access points, and central media closets.
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span class="list-bullet"></span>
+                                        <div>
+                                            <strong>HD IP Security Cameras:</strong> Hardwired POE camera integration, network video recorders (NVR), and secure local storage access.
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span class="list-bullet"></span>
+                                        <div>
+                                            <strong>Smart Home Automation:</strong> Smart switches, intelligent shading, integrated intercoms, and complete home control configurations.
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span class="list-bullet"></span>
+                                        <div>
+                                            <strong>Structured AV Closets:</strong> Clean equipment rack organization, patch panels, power conditioners, and audio routing setups.
+                                        </div>
+                                    </li>
+                                </ul>
+                                <a href="#contact" (click)="selectService('Low Voltage / Smart Home')" class="btn btn-primary select-service-btn">Request Smart Home Quote</a>
+                            </div>
+                            <div class="panel-graphic">
+                                <div class="grid-layout-graphic">
+                                    <div class="graphic-card">
+                                        <div class="card-icon blue-glow">
+                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"/><line x1="7" y1="2" x2="7" y2="22"/><line x1="17" y1="2" x2="17" y2="22"/><line x1="2" y1="12" x2="22" y2="12"/></svg>
+                                        </div>
+                                        <h4>Structured Data Rack</h4>
+                                        <p>Pre-wired Cat6A network backbones for multi-room gigabit networks.</p>
+                                    </div>
+                                    <div class="graphic-card">
+                                        <div class="card-icon green-glow">
+                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+                                        </div>
+                                        <h4>IP Security Cameras</h4>
+                                        <p>Power over Ethernet camera rings with smart local video recording.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solar & Energy Calculator Section -->
+    <section id="calculator" class="calculator-section">
+        <div class="container calculator-grid">
+            <div class="calculator-info">
+                <span class="badge-title green-accent">Instant Estimation Tool</span>
+                <h2>See How Much You Can Save With Custom Solar</h2>
+                <p>By shifting to solar energy and storing power locally, homeowners slash their monthly utilities and benefit from federal and local clean energy tax incentives.</p>
+                
+                <div class="calc-points">
+                    <div class="calc-point">
+                        <div class="calc-point-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <div>
+                            <h4>30% Federal ITC Tax Credit</h4>
+                            <p>Write off a substantial percentage of your installation costs directly on taxes.</p>
+                        </div>
+                    </div>
+                    <div class="calc-point">
+                        <div class="calc-point-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <div>
+                            <h4>Energy Independence</h4>
+                            <p>Immunize your house from high utility peak-rate fluctuations and rolling blackout hazards.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Interactive Calculator App -->
+            <div class="calculator-app">
+                <div class="calc-header">
+                    <h3>Solar Savings Estimator</h3>
+                    <p>Adjust the sliders below to calculate custom estimates.</p>
+                </div>
+
+                <div class="calc-body">
+                    <!-- Bill Slider -->
+                    <div class="slider-group">
+                        <div class="slider-labels">
+                            <label for="bill-range">Monthly Electric Bill</label>
+                            <span class="slider-value" id="bill-display">${{ monthlyBill }}</span>
+                        </div>
+                        <input type="range" id="bill-range" min="100" max="800" step="10" 
+                               [(ngModel)]="monthlyBill" (input)="calculateSolar()" class="input-slider">
+                        <div class="slider-ticks">
+                            <span>$100</span>
+                            <span>$450</span>
+                            <span>$800</span>
+                        </div>
+                    </div>
+
+                    <!-- Sun Slider -->
+                    <div class="slider-group">
+                        <div class="slider-labels">
+                            <label for="sun-range">Average Daily Direct Sun</label>
+                            <span class="slider-value" id="sun-display">{{ sunHours.toFixed(1) }} Hours</span>
+                        </div>
+                        <input type="range" id="sun-range" min="2" max="8" step="0.5" 
+                               [(ngModel)]="sunHours" (input)="calculateSolar()" class="input-slider">
+                        <div class="slider-ticks">
+                            <span>2 hrs (Shaded)</span>
+                            <span>5 hrs (Avg)</span>
+                            <span>8 hrs (Sunny)</span>
+                        </div>
+                    </div>
+
+                    <!-- Calculator Results -->
+                    <div class="calc-results">
+                        <div class="result-box">
+                            <span class="result-label">Recommended System</span>
+                            <span class="result-value">{{ systemSize.toFixed(1) }} kW</span>
+                            <span class="result-sub">{{ panelCount }} High-Efficiency Panels</span>
+                        </div>
+                        <div class="result-box highlighted">
+                            <span class="result-label">Estimated Monthly Savings</span>
+                            <span class="result-value text-accent">${{ monthlySavings }}</span>
+                            <span class="result-sub">Save ${{ annualSavings.toLocaleString() }} / year</span>
+                        </div>
+                    </div>
+
+                    <div class="carbon-impact">
+                        <span class="carbon-icon">🌱</span>
+                        <span class="carbon-text">Equivalent to planting <strong class="text-accent">{{ treesPlanted }} trees</strong> every year in carbon reductions!</span>
+                    </div>
+
+                    <button class="btn btn-primary btn-block calc-cta" (click)="lockInCalculator()">Lock In Your Savings Estimate</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section id="why-us" class="why-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Our Promise</span>
+                <h2>A Premium Contractor Experience</h2>
+                <p class="section-desc">We deliver outstanding workmanship, transparent communication, and clean electrical work from start to finish.</p>
+            </div>
+
+            <div class="why-grid">
+                <div class="why-card">
+                    <div class="why-card-icon blue-glow">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+                    </div>
+                    <h3>Punctual & Fast Response</h3>
+                    <p>We value your schedule. Our technicians arrive on time, fully stocked, and ready to implement solutions.</p>
+                </div>
+
+                <div class="why-card">
+                    <div class="why-card-icon green-glow">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                    </div>
+                    <h3>Precision Craftsmanship</h3>
+                    <p>No loose conduits, no messy cabling networks. All panels and low voltage closets are structured cleanly.</p>
+                </div>
+
+                <div class="why-card">
+                    <div class="why-card-icon blue-glow">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+                    </div>
+                    <h3>Flat-Rate Transparent Pricing</h3>
+                    <p>We provide comprehensive itemized quotes beforehand. Zero hidden surcharges, zero unexpected costs.</p>
+                </div>
+
+                <div class="why-card">
+                    <div class="why-card-icon green-glow">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"/><path d="M9 12L11 14L15 10"/></svg>
+                    </div>
+                    <h3>Lifetime Support & Warranty</h3>
+                    <p>We back our solar panel installations and panel rebuilds with a 25-year comprehensive equipment warrantee.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Gallery Section -->
+    <section id="gallery" class="gallery-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Technical Portfolio</span>
+                <h2>Our Services & Installations</h2>
+                <p class="section-desc">A visual overview of the premium standard of work we provide across residential electrical, solar power, and smart home network systems.</p>
+            </div>
+
+            <div class="gallery-grid">
+                <div *ngFor="let item of galleryImages; let idx = index" class="gallery-card" (click)="openGalleryModal(idx)">
+                    <div class="gallery-card-img-wrapper">
+                        <img [src]="item.url" [alt]="item.title" loading="lazy" class="gallery-card-img">
+                        <div class="gallery-card-hover-overlay">
+                            <span class="gallery-zoom-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="icon-search"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="gallery-card-info">
+                        <span class="gallery-card-cat">{{ item.category }}</span>
+                        <h3>{{ item.title }}</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Lightbox Modal -->
+    <div *ngIf="isGalleryModalOpen" class="gallery-modal" (click)="closeGalleryModal()">
+        <button class="modal-close-btn" (click)="closeGalleryModal()" aria-label="Close modal">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+        
+        <button class="modal-nav-btn prev-btn" (click)="prevGalleryImage($event)" aria-label="Previous image">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
+        </button>
+
+        <div class="modal-content-wrapper" (click)="$event.stopPropagation()">
+            <div class="modal-img-container">
+                <img [src]="galleryImages[activeGalleryIndex].url" [alt]="galleryImages[activeGalleryIndex].title" class="modal-img">
+            </div>
+            <div class="modal-info-panel">
+                <span class="modal-img-cat">{{ galleryImages[activeGalleryIndex].category }}</span>
+                <h2>{{ galleryImages[activeGalleryIndex].title }}</h2>
+                <p>{{ galleryImages[activeGalleryIndex].desc }}</p>
+                <div class="modal-img-counter">{{ activeGalleryIndex + 1 }} / {{ galleryImages.length }}</div>
+            </div>
+        </div>
+
+        <button class="modal-nav-btn next-btn" (click)="nextGalleryImage($event)" aria-label="Next image">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </button>
+    </div>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="testimonials-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Real Reviews</span>
+                <h2>What Our Clients Say</h2>
+                <p class="section-desc">We take pride in our workmanship. Read reviews from verified local homeowners about their system upgrades.</p>
+            </div>
+
+            <div class="carousel-container">
+                <div class="testimonials-carousel" id="carousel" [style.transform]="'translateX(-' + currentTestimonialIndex * 100 + '%)'">
+                    <!-- Card 1 -->
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <p class="testi-text">"Perpetual Electric completely modernized our 1960s home! They updated our old fuse board to a clean 200A panel, integrated a Level 2 Tesla charger, and wired up a beautiful Cat6A ethernet mesh network. The level of detail was absolutely top notch."</p>
+                        <div class="testi-author">
+                            <div class="author-avatar">MS</div>
+                            <div>
+                                <span class="author-name">Marcus Sterling</span>
+                                <span class="author-loc">Residential Electrical & Low Voltage Client</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <p class="testi-text">"Outstanding solar installation team. They walked us through net metering and local tax credits, installed 22 high-performance panels, and mounted two battery units. Our monthly energy bill dropped from $380 to $12!"</p>
+                        <div class="testi-author">
+                            <div class="author-avatar">HK</div>
+                            <div>
+                                <span class="author-name">Helena Kross</span>
+                                <span class="author-loc">Solar Installation Client</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <p class="testi-text">"I hired them to pre-wire our custom home build. They ran network wiring, mounted POE cameras in key areas, and set up a clean central server closet. Absolute professionals who speak low voltage and high voltage fluently."</p>
+                        <div class="testi-author">
+                            <div class="author-avatar">TB</div>
+                            <div>
+                                <span class="author-name">Tyler Bennett</span>
+                                <span class="author-loc">Smart Home & Low Voltage Client</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Carousel Controls -->
+                <div class="carousel-dots" id="carousel-dots">
+                    <span class="dot" [class.active]="currentTestimonialIndex === 0" (click)="setTestimonialIndex(0)"></span>
+                    <span class="dot" [class.active]="currentTestimonialIndex === 1" (click)="setTestimonialIndex(1)"></span>
+                    <span class="dot" [class.active]="currentTestimonialIndex === 2" (click)="setTestimonialIndex(2)"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Our Leadership</span>
+                <h2>Meet the Co-Founders</h2>
+                <p class="section-desc">The technical expertise and operations management driving modern power and clean energy integrations in Southern California.</p>
+            </div>
+
+            <div class="about-slider">
+                <!-- Slide Content -->
+                <div class="about-grid">
+                    <div class="about-visual">
+                        <div class="about-img-wrapper">
+                            <div class="about-glow-ring"></div>
+                            <img [src]="aboutProfiles[activeProfileIndex].image" [alt]="aboutProfiles[activeProfileIndex].name" class="about-img">
+                        </div>
+                    </div>
+                    
+                    <div class="about-content">
+                        <span class="badge-title green-accent">{{ aboutProfiles[activeProfileIndex].role }}</span>
+                        <h2>{{ aboutProfiles[activeProfileIndex].name }}</h2>
+                        <p class="about-lead">{{ aboutProfiles[activeProfileIndex].lead }}</p>
+                        <p>{{ aboutProfiles[activeProfileIndex].bio }}</p>
+                        
+                        <div class="about-features">
+                            <div *ngFor="let feat of aboutProfiles[activeProfileIndex].features" class="about-feature-item">
+                                <div class="about-feature-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                </div>
+                                <div>
+                                    <h4>{{ feat.title }}</h4>
+                                    <p>{{ feat.desc }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slider Controls -->
+                <div class="about-controls">
+                    <button class="about-nav-btn" (click)="prevProfile()" aria-label="Previous Profile">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                    </button>
+                    
+                    <div class="about-dots">
+                        <span *ngFor="let p of aboutProfiles; let idx = index" 
+                              class="dot" 
+                              [class.active]="activeProfileIndex === idx" 
+                              (click)="setActiveProfile(idx)"></span>
+                    </div>
+
+                    <button class="about-nav-btn" (click)="nextProfile()" aria-label="Next Profile">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking / Lead Capture Section -->
+    <section id="contact" class="contact-section">
+        <div class="container contact-grid">
+            <div class="contact-text-column">
+                <span class="badge-title blue-accent">Get in Touch</span>
+                <h2>Ready to Build Modern Home Infrastructure?</h2>
+                <p>Fill out our short questionnaire, and a licensed specialist will contact you within 24 business hours to arrange a free site evaluation and quote.</p>
+                
+                <div class="contact-quick-info">
+                    <div class="info-row">
+                        <svg class="info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                        <div>
+                            <span>Call Direct</span>
+                            <strong><a href="tel:18054166596" class="link-hover">(805) 416-6596</a></strong>
+                        </div>
+                    </div>
+                    <div class="info-row">
+                        <svg class="info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        <div>
+                            <span>General Inquiries</span>
+                            <strong><a href="mailto:Scott.rodriguez@perpetualelectric.net" class="link-hover">Scott.rodriguez@perpetualelectric.net</a></strong>
+                        </div>
+                    </div>
+                    <div class="info-row">
+                        <svg class="info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        <div>
+                            <span>Service Coverage</span>
+                            <strong>Ventura and LA counties and surrounding suburbs</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Form Card -->
+            <div class="contact-form-card">
+                <form #quoteForm="ngForm" (ngSubmit)="submitQuoteForm(quoteForm)" class="quote-form" novalidate>
+                    <h3 class="form-title">Request a Consultation</h3>
+                    
+                    <!-- Name Input -->
+                    <div class="form-group" [class.has-error]="(formNameRef.touched || formSubmitted) && formNameRef.invalid">
+                        <input type="text" id="form-name" required placeholder=" " 
+                               [(ngModel)]="formData.name" name="name" #formNameRef="ngModel" class="form-input">
+                        <label for="form-name" class="form-label">Full Name</label>
+                        <span class="error-msg">Please enter your name.</span>
+                    </div>
+
+                    <div class="form-row-2">
+                        <!-- Email Input -->
+                        <div class="form-group" [class.has-error]="(formEmailRef.touched || formSubmitted) && formEmailRef.invalid">
+                            <input type="email" id="form-email" required pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$" 
+                                   placeholder=" " [(ngModel)]="formData.email" name="email" #formEmailRef="ngModel" class="form-input">
+                            <label for="form-email" class="form-label">Email Address</label>
+                            <span class="error-msg">Please enter a valid email.</span>
+                        </div>
+                        
+                        <!-- Phone Input -->
+                        <div class="form-group" [class.has-error]="(formPhoneRef.touched || formSubmitted) && formPhoneRef.invalid">
+                            <input type="tel" id="form-phone" required pattern="^\D?(\d\D?){10,}$" 
+                                   placeholder=" " [(ngModel)]="formData.phone" name="phone" #formPhoneRef="ngModel" class="form-input">
+                            <label for="form-phone" class="form-label">Phone Number</label>
+                            <span class="error-msg">Please enter your phone number.</span>
+                        </div>
+                    </div>
+
+                    <!-- Service Dropdown -->
+                    <div class="form-group select-wrapper" [class.has-error]="(formServiceRef.touched || formSubmitted) && formServiceRef.invalid">
+                        <select id="form-service" required [class.valid]="formData.service !== ''"
+                                [(ngModel)]="formData.service" name="service" #formServiceRef="ngModel" class="form-select">
+                            <option value="" disabled selected hidden></option>
+                            <option value="Residential Electrical">Residential Electrical Work</option>
+                            <option value="Solar Energy">Solar Panel Systems & Batteries</option>
+                            <option value="Low Voltage / Smart Home">Low Voltage / Smart Home Networking</option>
+                            <option value="Multiple Services">Multiple Combined Projects</option>
+                        </select>
+                        <label for="form-service" class="form-label select-label">Primary Project Interest</label>
+                        <span class="error-msg">Please select a service interest.</span>
+                    </div>
+
+                    <!-- Message TextArea -->
+                    <div class="form-group">
+                        <textarea id="form-message" rows="4" placeholder=" " 
+                                  [(ngModel)]="formData.message" name="message" class="form-textarea"></textarea>
+                        <label for="form-message" class="form-label">Describe your project requirements...</label>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-block submit-btn" [class.loading]="isSubmitting" [disabled]="isSubmitting">
+                        <span>Submit Request</span>
+                        <div class="loader" id="form-loader"></div>
+                    </button>
+                </form>
+                
+                <!-- Form Success Message -->
+                <div class="form-success-overlay" [class.active]="formSuccess">
+                    <div class="success-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                    </div>
+                    <h3>Thank You!</h3>
+                    <p>Your service request has been received. Our engineering estimator will reach out to you at the phone number and email provided within 24 business hours.</p>
+                    <button class="btn btn-outline" (click)="resetQuoteForm(quoteForm)">Submit another request</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<!-- Footer Section -->
+<footer class="footer">
+    <div class="container footer-grid">
+        <div class="footer-brand-column">
+            <a href="#" class="logo footer-logo">
+                <img src="assets/logo-icon.png" alt="Perpetual Electric Logo Icon" class="logo-icon-img" style="height: 36px; width: 36px; object-fit: contain;">
+                <span class="logo-text"><span class="logo-p">Perpetual</span><span class="logo-e">Electric</span></span>
+            </a>
+            <p class="footer-desc">Professional master residential electrical work, CEC-certified solar panel arrays, and CEDIA-certified low-voltage systems integrated seamlessly.</p>
+            <span class="license-number">State License No. #109283-A (Class C-10 Electrical & C-46 Solar)</span>
+        </div>
+
+        <div class="footer-links-column">
+            <h4>Services</h4>
+            <nav class="footer-nav">
+                <a href="#services">Electrical Panel Upgrades</a>
+                <a href="#services">EV Charger Installations</a>
+                <a href="#services">Solar Array Panels</a>
+                <a href="#services">Battery Backups</a>
+                <a href="#services">Low Voltage Network Cabling</a>
+                <a href="#services">Smart Security & AV Closets</a>
+            </nav>
+        </div>
+
+        <div class="footer-links-column">
+            <h4>Navigation</h4>
+            <nav class="footer-nav">
+                <a href="#">Back to Top</a>
+                <a href="#services">Services</a>
+                <a href="#calculator">Solar Savings Tool</a>
+                <a href="#why-us">Why Choose Us</a>
+                <a href="#testimonials">Testimonials</a>
+                <a href="#contact">Schedule Service</a>
+            </nav>
+        </div>
+
+        <div class="footer-contact-column">
+            <h4>Contact Info</h4>
+            <ul class="footer-contact-list">
+                <li>
+                    <strong>Phone:</strong> <a href="tel:18054166596">(805) 416-6596</a>
+                </li>
+                <li>
+                    <strong>Email:</strong> <a href="mailto:Scott.rodriguez@perpetualelectric.net">Scott.rodriguez@perpetualelectric.net</a>
+                </li>
+                <li>
+                    <strong>Headquarters:</strong> Ventura County, CA
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <div class="container footer-bottom-container">
+            <p>&copy; 2026 Perpetual Electric Technologies, Inc. All rights reserved.</p>
+            <div class="footer-socials">
+                <a href="#" aria-label="Facebook">
+                    <svg class="social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                </a>
+                <a href="#" aria-label="LinkedIn">
+                    <svg class="social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                </a>
+                <a href="#" aria-label="Instagram">
+                    <svg class="social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
